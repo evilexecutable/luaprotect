@@ -23,7 +23,7 @@ print("Welcome to LuaProtect!")
 local function start()
 print("\n\n\========Choose your poison.=======")
 print(" a): Clear Browsers (Cache, profiles, etc) WARNING: You'll lose bookmarks. \n\ b): Remove cache only\n\ c): Write 0's to C drives free space.")
-choice = io.read()
+choice = io.read():lower()
 end
 
 start()
