@@ -42,7 +42,7 @@ if choice == "b" then
 	local responsechrome = os.execute("cd C:\\Program Files\\Google\\Chrome\\Application\\") --Check for Google Chrome.
 		if responsechrome == 0 then
 			print("Chrome found... Deleting cache files...")
-			os.execute("del %localappdata%\Google\Chrome\\User Data\\Default\Cache\*")	--Execute del command.
+			os.execute("del %localappdata%\Google\Chrome\\UserDa~1\\Defaultz\Cache\\*")	--Execute del command.
 		else
 			print("Chrome not found, skipping...")
 		end
