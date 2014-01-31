@@ -89,4 +89,10 @@ if choice == "b" then
 	print("Browsers cleaned.")
 end
 
+if choice == "c" then
+	print("Enter drive letter you wish to wipe:")
+	local drivechoice = io.read():upper()
+	os.execute("cipher /w:" .. (drivechoice))
+end
+
 --start()
