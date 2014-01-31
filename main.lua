@@ -92,6 +92,7 @@ end
 if choice == "c" then
 	print("Enter drive letter you wish to wipe:")
 	local drivechoice = io.read():upper()
+	print("Cipher is now wiping the free space on the drive. This will take a while.")
 	os.execute("cipher /w:" .. (drivechoice))
 end
 
