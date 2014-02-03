@@ -17,19 +17,22 @@
 ---------------------------------------------------------------------------------
 	
 	print("Enter drive letter you wish to wipe:")
-	local drivechoice = io.read():upper()
+	drivechoice = io.read():upper()
 	
-	print("How many times do you wish to wipe?\n\The more wipes, the longer it will take but more secure.")
-	local wipecount = io.read()
+	print("How many times do you wish to wipe?\n\The more wipes, the longer it will take but more\n\secure you will be.")
+	wipecount = io.read("*number")
 	
-	local count = 0
-	
+	count = 0
+	print("Cipher is now wiping the free space on the drive. This will take a while.")	
 	while count < wipecount do
-		print("Cipher is now wiping the free space on the drive. This will take a while.")
 		os.execute("cipher /w:" .. (drivechoice))
-		print("Done " .. count .. " passes.")
 		count = count + 1
+		print("Done " .. count .. " passes.")
 	end
+	
+	drivechoice = nil
+	wipcount = nil
+	count = nil
 	
 	print("Drive wiped.")
 	dofile("main.lua")
