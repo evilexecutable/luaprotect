@@ -22,7 +22,7 @@ print("Welcome to LuaProtect!")
 
 function start()
 print("\n\n\========Choose your poison=======")
-print(" a): Clear Installed Browsers (Cache, profiles) WARNING: You'll lose bookmarks.  b): Remove cache only\n\ c): Write 0's to C drives free space.")
+print(" a): Clear Installed Browsers (Cache, profiles) WARNING: You'll lose bookmarks.  b): Remove cache only\n\ c): Write 0's to C drives free space.\n\ d): Flush DNS cache and get new ip.")
 print(" (Please all applications are closed) ")
 choice = io.read():lower()
 end
@@ -41,4 +41,7 @@ if choice == "c" then
 	dofile("drivewipe.lua")
 end
 
+if choice == "d" then
+	dofile("flush.lua")
+end
 --start()
