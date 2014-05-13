@@ -22,7 +22,7 @@ print("Welcome to LuaProtect!")
 
 function start()
 print("\n\n\========Choose your poison=======")
-print(" a): Clear Installed Browsers (Cache, profiles) WARNING: You'll lose bookmarks.  b): Choose browser to clear. c): Remove cache only\n\ d): Write 0's to C drives free space.\n\ e): Flush DNS cache and get new ip.")
+print(" a): Clear Installed Browsers (Cache, profiles) WARNING: You'll lose bookmarks.  b): Choose browser to clear.\n\ c): Remove cache only\n\ d): Write 0's to C drives free space.\n\ e): Flush DNS cache and get new ip.")
 print(" (Please ensure all applications are closed) ")
 choice = io.read():lower()
 end
