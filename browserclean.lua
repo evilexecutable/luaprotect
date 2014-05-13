@@ -2,7 +2,7 @@
 --    Copyright (C) {2014}  {evilexecutable}
 --
 --  This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
+--  it under the terms of the GNU General Public License as published by
 --  the Free Software Foundation; either version 2 of the License, or
 --  (at your option) any later version.
 --
@@ -15,7 +15,8 @@
 --  with this program; if not, write to the Free Software Foundation, Inc.,
 --  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ---------------------------------------------------------------------------------
-
+	
+	--The below is just a dirtyhack for detecting if directory exists. Maybe another method would be better.
 	print("Detecting Browsers...")
 	local detectie = os.execute("cd C:\\Program Files\\Internet Explorer\\")	--Check for internet explorer.
 		if detectie == 0 then
@@ -34,7 +35,7 @@
 			print("Chrome not found, skipping...")
 		end
 	
-	local responsechromium = os.execute("cd %localappdata%\\Chromium\\")
+	local responsechromium = os.execute("cd %localappdata%\\Chromium\\") --Check for chromium.
 		if responsechromium == 0 then
 			print("Chromium-based browser found... Deleting browser files...")
 			os.execute("del %localappdata%\\Chromium\\UserDa~1\\Default\\*")
