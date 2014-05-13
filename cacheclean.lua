@@ -42,5 +42,10 @@ print("Detecting Browsers...")
 			print("Chromium not found, skipping...")
 		end
 	
+	local responsefirefox = os.execute("cd %localappdata%\\Mozilla\\Firefox\\")
+		if responsefirefox == 0 then
+			print("Firefox found... Deleting cache files...")
+			os.execute("del %localappdata%\\Mozilla\\Firefox\\UserDa~1\\
+	
 	print("Browsers cleaned.")
 	dofile("main.lua")
