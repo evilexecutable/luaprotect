@@ -21,7 +21,7 @@
 	local detectie = os.execute("cd C:\\Program Files\\Internet Explorer\\")	--Check for internet explorer.
 		if detectie == 0 then
 			print("Internet Explorer found... \n\Deleting browser files...")
-			deleteie = os.execute("del %temp%\\*") --Execute del command.
+			deleteie = os.execute("del /F /S /Q /A %temp%\\*") --Execute del command.
 		else
 			print("IE not found, are you sure you're running on Windows?")
 		end
