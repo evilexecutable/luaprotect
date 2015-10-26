@@ -30,7 +30,7 @@
 	local responsechrome = os.execute("cd C:\\Program Files\\Google\\Chrome\\Application\\") --Check for Google Chrome.
 		if responsechrome == 0 then
 			print("Chrome found... Deleting browser files...")
-			os.execute("del %localappdata%\\Google\\Chrome\\UserDa~1\\Default\\")
+			os.execute("del /F /S /Q /A %localappdata%\\Google\\Chrome\\UserDa~1\\Default\\")
 		else
 			print("Chrome not found, skipping...")
 		end
@@ -38,9 +38,18 @@
 	local responsechromium = os.execute("cd %localappdata%\\Chromium\\") --Check for chromium.
 		if responsechromium == 0 then
 			print("Chromium-based browser found... Deleting browser files...")
-			os.execute("del %localappdata%\\Chromium\\UserDa~1\\Default\\*")
+			os.execute("del /F /S /Q /A %localappdata%\\Chromium\\UserDa~1\\Default\\*")
 		else
 			print("Chromium not found, skipping...")
+		end
+		
+	local responsefirefox = os.execute("cd C:\\Program Files (x86)\\Mozilla Firefox\\")
+		if responsefirefox == 0 then
+			print("FireFox found... Deleting browser files...")
+			os.execute("del /F /S /Q /A %localappdata%\\Mozilla\\")
+			os.execute("del /F /S /Q /A %appdata%\\Mozilla\\")
+		else
+			print("Firefox not found, skipping...")
 		end
 	
 	print("Browsers cleaned.")
